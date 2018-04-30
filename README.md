@@ -1,4 +1,4 @@
-#  setwd("C:/Users/?ick/Desktop/Comunity ecology research")
+setwd("C:/Users/?ick/Desktop/Comunity ecology research")
 library("csv")
 library("ggplot2")
 library("car")
@@ -36,21 +36,17 @@ for (i in 1:length(all_comb[1,])) {
   # columns of d to compare: all_comb[,i]
   print(names(d[,all_comb[,i]]))
   for (j in 1:nrow(d)){
-    
+    cooccur <- ifelse(d[,all_comb[1,i]] != 0 & d[,all_comb[2,i]] != 0, yes = 1, no = 0)
+    print(cooccur)
+    }
   }
-}
 
+cooccur <- ifelse(d[,all_comb[,i]] != 0, yes = 1, no = 0) 
+print(cooccur)
 
-    x <- if (j >0) 
-          1 else 0
-    y <- if (ssp_columns[ssp_columns != i] > 0) 
-          1 else 0
-    if (x && y != 0) 
-  }
-    
     
   
-}
+
 
 
 g <- 23:72
@@ -59,6 +55,12 @@ g <- 23:72
 all_comb <- combn(g, 2)
 View(all_comb)
 print(i)
+
+
+
+
+
+
 
 
 
